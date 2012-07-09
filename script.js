@@ -138,7 +138,7 @@ clock.calendarFlip = function() {
 // Run the clock
 $(document).ready(function() {
   $(clock.cssReference.CLOCK).addClass('running');
-  t = setInterval(clock.calendarFlip, 1000);
+  //t = setInterval(clock.calendarFlip, 1000);
   
   $('#color-switch').click(function() {
     $('body').toggleClass('light').toggleClass('dark');
