@@ -42,7 +42,7 @@ h1 span {
 }
 
 body.light {
-  background: #fff url(img/pattern-light.png) repeat fixed;
+  background: #fff url(../img/pattern-light.png) repeat fixed;
 }
 
 .light .container {
