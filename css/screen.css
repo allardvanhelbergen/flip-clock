@@ -1,6 +1,6 @@
 /**
  * Normal page stuff
- */
+ *******************************************************************/
 
 * {
   padding: 0;
@@ -65,19 +65,19 @@ body.dark {
 
 /**
  * Flip Clock
- */
+ *******************************************************************/
 
 #calendar-container {
-  position: relative;
+  color: #fff;
+	font-family: 'Impact', sans-serif;
+	position: relative;
   left: 0;
   top: 250px;
   width: 100%;
 }
 
 #calendar {
-  outline: 1px solid #bada55;
-	color: #fff;
-	font-family: 'Impact', sans-serif;
+  /*outline: 1px solid #bada55;*/
 	height: 375px;
 	margin: auto;
 	padding: 25px;
@@ -88,7 +88,7 @@ body.dark {
 .calendar-row {
   height: 150px;
   text-align: center;
-  outline: 1px solid #bada55;
+  /*outline: 1px solid #bada55;*/
   padding-top: 10px;
 }
 
@@ -121,7 +121,7 @@ body.dark {
 }
 */
 .flipper {
-  outline: 1px solid #bada55;
+  /*outline: 1px solid #bada55;*/
 	margin: 0 5px;
 	width: 140px;
 	height: 120px;
@@ -187,9 +187,19 @@ body.dark {
 	        transform-origin: 50% 100%;
 }
 
+/**
+ * Background elements
+ *******************************************************************/
+
 #background {
-  background-color: gray;
-  border: 30px solid #bad455;
+  background: rgb(43,44,39); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(43,44,39,1) 0%, rgba(79,80,75,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(43,44,39,1)), color-stop(100%,rgba(79,80,75,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(43,44,39,1) 0%,rgba(79,80,75,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(43,44,39,1) 0%,rgba(79,80,75,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(43,44,39,1) 0%,rgba(79,80,75,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(43,44,39,1) 0%,rgba(79,80,75,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2c27', endColorstr='#4f504b',GradientType=1 ); /* IE6-9 */
   -webkit-border-radius: 50px;
 	   -moz-border-radius: 50px;
 	     -o-border-radius: 50px;
@@ -197,10 +207,113 @@ body.dark {
   margin: auto;
   position: relative;
   top: -425px;
-  width: 700px;
+  width: 735px;
   height: 475px;
   z-index: -1;
 }
+
+.flipper-bg {
+  background-color: #000;
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  border: 2px solid #1f201b;
+  -webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	     -o-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+#flipper-1-1,
+#flipper-1-2,
+#flipper-1-3 {
+  top: 60px;
+}
+
+#flipper-2-1,
+#flipper-2-2 {
+  top: 285px;
+}
+
+#flipper-1-1 {
+  left: 100px;
+}
+
+#flipper-1-2 {
+  left: 295px;
+}
+
+#flipper-1-3 {
+  left: 490px;
+}
+
+#flipper-2-1 {
+  left: 190px;
+}
+
+#flipper-2-2 {
+  left: 385px;
+}
+
+.flipper-bg .highlight {
+  -webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	     -o-border-radius: 8px;
+	        border-radius: 8px;
+  -webkit-box-shadow: -1px 1px 1px 1px #555651;
+          box-shadow: -1px 1px 1px 1px #555651;
+  height: 100%;
+  width: 100%;
+}
+
+#large-black-hole {
+  background-color: #000;
+  position: absolute;
+  width: 20px;
+  height: 35px;
+  border: 1px solid #1f201b;
+  -webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	     -o-border-radius: 2px;
+	        border-radius: 2px;
+	left: 600px;
+	top: 320px;
+}
+
+#small-black-hole {
+  background-color: #000;
+  position: absolute;
+  width: 10px;
+  height: 15px;
+  border: 1px solid #1f201b;
+  -webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	     -o-border-radius: 2px;
+	        border-radius: 2px;
+	left: 600px;
+	top: 320px;
+}
+
+#twemco-text {
+  position: absolute;
+  text-align: center;
+  top: 360px;
+  left: 576px;
+}
+
+#twemco-text .first {
+ font-size: 12px;
+ letter-spacing: 3px;
+}
+
+#twemco-text .second {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/**
+ * Foreground elements
+ *******************************************************************/
 
 #foreground {
   margin: auto;
@@ -447,13 +560,13 @@ body.dark {
 }
 
 #glass-rim-black {
-  background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 61%, rgba(255,255,255,0.4) 85%, rgba(255,255,255,0.4) 92%, rgba(255,255,255,0.1) 98%, rgba(255,255,255,0.1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(61%,rgba(255,255,255,0.1)), color-stop(85%,rgba(255,255,255,0.4)), color-stop(92%,rgba(255,255,255,0.4)), color-stop(98%,rgba(255,255,255,0.1)), color-stop(100%,rgba(255,255,255,0.1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0.4) 85%,rgba(255,255,255,0.4) 92%,rgba(255,255,255,0.1) 98%,rgba(255,255,255,0.1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0.4) 85%,rgba(255,255,255,0.4) 92%,rgba(255,255,255,0.1) 98%,rgba(255,255,255,0.1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0.4) 85%,rgba(255,255,255,0.4) 92%,rgba(255,255,255,0.1) 98%,rgba(255,255,255,0.1) 100%); /* IE10+ */
-  background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0.4) 85%,rgba(255,255,255,0.4) 92%,rgba(255,255,255,0.1) 98%,rgba(255,255,255,0.1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1affffff',GradientType=1 ); /* IE6-9 */
+  background: -moz-linear-gradient(left,  rgba(115,116,111,0) 0%, rgba(115,116,111,0.1) 70%, rgba(115,116,111,0.6) 94%, rgba(115,116,111,0.6) 97%, rgba(115,116,111,0.1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(115,116,111,0)), color-stop(70%,rgba(115,116,111,0.1)), color-stop(94%,rgba(115,116,111,0.6)), color-stop(97%,rgba(115,116,111,0.6)), color-stop(100%,rgba(115,116,111,0.1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(115,116,111,0) 0%,rgba(115,116,111,0.1) 70%,rgba(115,116,111,0.6) 94%,rgba(115,116,111,0.6) 97%,rgba(115,116,111,0.1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(115,116,111,0) 0%,rgba(115,116,111,0.1) 70%,rgba(115,116,111,0.6) 94%,rgba(115,116,111,0.6) 97%,rgba(115,116,111,0.1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(115,116,111,0) 0%,rgba(115,116,111,0.1) 70%,rgba(115,116,111,0.6) 94%,rgba(115,116,111,0.6) 97%,rgba(115,116,111,0.1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(115,116,111,0) 0%,rgba(115,116,111,0.1) 70%,rgba(115,116,111,0.6) 94%,rgba(115,116,111,0.6) 97%,rgba(115,116,111,0.1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0073746f', endColorstr='#1a73746f',GradientType=1 ); /* IE6-9 */
   border: 6px solid #4a4b46;
   -webkit-border-radius: 47px;
 	   -moz-border-radius: 47px;
@@ -489,10 +602,10 @@ body.dark {
 	   -moz-border-radius: 0 30px 30px 0;
 	     -o-border-radius: 0 30px 30px 0;
 	        border-radius: 0 30px 30px 0;
-  -webkit-box-shadow: 4px 0px 3px 2px #464742;
-          box-shadow: 4px 0px 3px 2px #464742;
+  -webkit-box-shadow: 4px 0px 3px 2px #353535;
+          box-shadow: 4px 0px 3px 2px #353535;
   height: 418px;
-	left: 663px;
+	left: 660px;
 	position: absolute;
 	top: 43px;
   width: 35px;
@@ -500,13 +613,12 @@ body.dark {
 
 #glass-rim-shadow-left {
   background: transparent;
-  border-right: 1px solid #777
   -webkit-border-radius: 0 30px 30px 0;
 	   -moz-border-radius: 0 30px 30px 0;
 	     -o-border-radius: 0 30px 30px 0;
 	        border-radius: 0 30px 30px 0;
-  -webkit-box-shadow: 10px 0px 10px 1px #565752;
-          box-shadow: 10px 0px 10px 1px #565752;
+  -webkit-box-shadow: 8px 0px 8px 1px #1A1A1A;
+          box-shadow: 8px 0px 8px 1px #1A1A1A;
   height: 418px;
 	left: 635px;
 	position: absolute;
@@ -516,13 +628,12 @@ body.dark {
 
 #glass-rim-shadow-left2 {
   background: transparent;
-  border-right: 1px solid #777
   -webkit-border-radius: 0 30px 30px 0;
 	   -moz-border-radius: 0 30px 30px 0;
 	     -o-border-radius: 0 30px 30px 0;
 	        border-radius: 0 30px 30px 0;
-  -webkit-box-shadow: inset -8px 0px 8px 0px #565752;
-          box-shadow: inset -8px 0px 8px 0px #565752;
+  -webkit-box-shadow: inset -8px 0px 8px 0px #1A1A1A;
+          box-shadow: inset -8px 0px 8px 0px #1A1A1A;
   height: 420px;
 	left: 635px;
 	position: absolute;
