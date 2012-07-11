@@ -77,10 +77,8 @@ body.dark {
 }
 
 #calendar {
-  /*outline: 1px solid #bada55;*/
 	height: 375px;
 	margin: auto;
-	padding: 25px;
 	position: relative;  
 	width: 600px;
 }
@@ -88,16 +86,15 @@ body.dark {
 .calendar-row {
   height: 150px;
   text-align: center;
-  /*outline: 1px solid #bada55;*/
-  padding-top: 10px;
 }
 
 .row1 {
-  padding-left: 45px;
+  padding: 19px 0 0 36px;
 }
 
 .row2 {
-  padding-left: 115px;
+  margin-top: 95px;
+  padding-left: 137px;
 }
 
 /*
@@ -122,8 +119,7 @@ body.dark {
 */
 .flipper {
   /*outline: 1px solid #bada55;*/
-	margin: 0 5px;
-	width: 140px;
+	width: 133px;
 	height: 120px;
 	padding: 0 0;
 	background: #1a1a1a;
@@ -133,13 +129,23 @@ body.dark {
 	letter-spacing: -3px;
 	line-height: 120px;
 	text-align: center;
-	-webkit-box-shadow: 0 0 2px #000;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	     -o-border-radius: 3px;
+	        border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px #000;
 	        box-shadow: 0 0 2px #000;
 }
 
 .day,
 .month {
-  font-size: 80px;
+  font-size: 70px;
+}
+
+.date,
+.month,
+.minute {
+  margin-left: 63px;
 }
 
 .fliptop {
