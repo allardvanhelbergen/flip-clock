@@ -287,8 +287,8 @@ body.dark {
 }
 
 .flipper-cog {
-  -webkit-box-shadow: inset 0px 0 2px 1px #1A1A1A;
-          box-shadow: inset 0px 0 2px 1px #1A1A1A;
+  -webkit-box-shadow: inset 0 0 2px 1px #1A1A1A;
+          box-shadow: inset 0 0 2px 1px #1A1A1A;
   height: 50px;
   position: relative;
   width: 5px;
@@ -351,8 +351,8 @@ body.dark {
 
 .stopper-bar {
   background: #4e4f4a;
-  -webkit-box-shadow: inset 0px 0 5px 1px #000;
-          box-shadow: inset 0px 0 5px 1px #000;
+  -webkit-box-shadow: inset 0 0 5px 1px #000;
+          box-shadow: inset 0 0 5px 1px #000;
   height: 20px;
   left: 75px;
   position: relative;
@@ -362,8 +362,8 @@ body.dark {
 
 #flipper-1-1 .stopper-bar,
 #flipper-2-1 .stopper-bar {
-  -webkit-box-shadow: inset 0px 0 5px 2px #000;
-          box-shadow: inset 0px 0 5px 2px #000;
+  -webkit-box-shadow: inset 0 0 5px 2px #000;
+          box-shadow: inset 0 0 5px 2px #000;
 }
 
 #large-black-hole {
@@ -393,8 +393,8 @@ body.dark {
 	   -moz-border-radius: 3px;
 	     -o-border-radius: 3px;
 	        border-radius: 3px;
-	-webkit-box-shadow: inset 0px 0 2px 1px #000;
-          box-shadow: inset 0px 0 2px 1px #000;
+	-webkit-box-shadow: inset 0 0 2px 1px #000;
+          box-shadow: inset 0 0 2px 1px #000;
 	margin-top: 3px;
   height: 20px;
   width: 10px;
@@ -420,8 +420,8 @@ body.dark {
 	   -moz-border-radius: 1px;
 	     -o-border-radius: 1px;
 	        border-radius: 1px;
-	 -webkit-box-shadow: 0px 1px 0px 0px #555651;
-           box-shadow: 0px 1px 0px 0px #555651;
+	 -webkit-box-shadow: 0 1px 0 0 #555651;
+           box-shadow: 0 1px 0 0 #555651;
 }
 
 #twemco-text {
@@ -447,8 +447,8 @@ body.dark {
 	   -moz-border-radius: 30px;
 	     -o-border-radius: 30px;
 	        border-radius: 30px;
-  -webkit-box-shadow: 0px 53px 30px -7px #727272;
-          box-shadow: 0px 53px 30px -7px #727272;
+  -webkit-box-shadow: 0 53px 30px -7px #727272;
+          box-shadow: 0 53px 30px -7px #727272;
   position: absolute;
   width: 650px;
   height: 40px;
@@ -462,8 +462,8 @@ body.dark {
 	   -moz-border-radius: 5px;
 	     -o-border-radius: 5px;
 	        border-radius: 5px;
-  -webkit-box-shadow: 0px 52px 15px 0px #303433;
-          box-shadow: 0px 52px 15px 0px #303433;
+  -webkit-box-shadow: 0 52px 15px 0 #303433;
+          box-shadow: 0 52px 15px 0 #303433;
   position: absolute;
   width: 550px;
   height: 10px;
@@ -490,8 +490,8 @@ body.dark {
 	   -moz-border-radius: 80px;
 	     -o-border-radius: 80px;
 	        border-radius: 80px;
-  -webkit-box-shadow: 0px 0px 1px 1px #949993;
-          box-shadow: 0px 0px 1px 1px #949993;
+  -webkit-box-shadow: 0 0 1px 1px #949993;
+          box-shadow: 0 0 1px 1px #949993;
   height: 500px;
   width: 750px;
 }
@@ -502,8 +502,8 @@ body.dark {
 	   -moz-border-radius: 0 0 63px 63px;
 	     -o-border-radius: 0 0 63px 63px;
 	        border-radius: 0 0 63px 63px;
-	-webkit-box-shadow: 0px 18px 6px 5px #272823;
-          box-shadow: 0px 18px 6px 5px #272823;
+	-webkit-box-shadow: 0 18px 6px 5px #272823;
+          box-shadow: 0 18px 6px 5px #272823;
   height: 300px;
 	left: 23px;
 	position: absolute;
@@ -517,8 +517,8 @@ body.dark {
 	   -moz-border-radius: 3px;
 	     -o-border-radius: 3px;
 	        border-radius: 3px;
-	-webkit-box-shadow: 0px 4px 10px 1px #000;
-          box-shadow: 0px 4px 10px 1px #000;
+	-webkit-box-shadow: 0 4px 10px 1px #000;
+          box-shadow: 0 4px 10px 1px #000;
   height: 9px;
 	left: 125px;
 	position: absolute;
@@ -538,8 +538,8 @@ body.dark {
 	   -moz-border-radius: 0 0 0 24px;
 	     -o-border-radius: 0 0 0 24px;
 	        border-radius: 0 0 0 24px;
-	-webkit-box-shadow: 0px 10px 15px 3px #2A2B26;
-          box-shadow: 0px 10px 15px 3px #2A2B26;
+	-webkit-box-shadow: 0 10px 15px 3px #2A2B26;
+          box-shadow: 0 10px 15px 3px #2A2B26;
   height: 200px;
 	left: 10px;
 	position: absolute;
@@ -559,8 +559,8 @@ body.dark {
 	   -moz-border-radius: 0 0 0 24px;
 	     -o-border-radius: 0 0 0 24px;
 	        border-radius: 0 0 0 24px;
-	-webkit-box-shadow: 0px 5px 4px 0px #262722;
-          box-shadow: 0px 5px 4px 0px #262722;
+	-webkit-box-shadow: 0 5px 4px 0 #262722;
+          box-shadow: 0 5px 4px 0 #262722;
   height: 200px;
 	left: 5px;
 	position: absolute;
@@ -610,8 +610,8 @@ body.dark {
 	   -moz-border-radius: 63px 63px 0 0;
 	     -o-border-radius: 63px 63px 0 0;
 	        border-radius: 63px 63px 0 0;
-	-webkit-box-shadow: 0px -4px 5px 1px #afafaf;
-          box-shadow: 0px -4px 5px 1px #afafaf;
+	-webkit-box-shadow: 0 -4px 5px 1px #afafaf;
+          box-shadow: 0 -4px 5px 1px #afafaf;
   height: 75px;
 	left: 20px;
 	position: absolute;
@@ -625,8 +625,8 @@ body.dark {
 	   -moz-border-radius: 63px 63px 0 0;
 	     -o-border-radius: 63px 63px 0 0;
 	        border-radius: 63px 63px 0 0;
-	-webkit-box-shadow: 0px -12px 21px 1px #a5afa7;
-          box-shadow: 0px -12px 21px 1px #a5afa7;
+	-webkit-box-shadow: 0 -12px 21px 1px #a5afa7;
+          box-shadow: 0 -12px 21px 1px #a5afa7;
   height: 110px;
 	left: 22px;
 	position: absolute;
@@ -641,8 +641,8 @@ body.dark {
 	   -moz-border-radius: 55px;
 	     -o-border-radius: 55px;
 	        border-radius: 55px;
-  -webkit-box-shadow: 0px -2px 5px 4px #3a3e41;
-          box-shadow: 0px -2px 5px 4px #3a3e41;
+  -webkit-box-shadow: 0 -2px 5px 4px #3a3e41;
+          box-shadow: 0 -2px 5px 4px #3a3e41;
   height: 450px;
 	left: 26px;
 	position: absolute;
@@ -656,8 +656,8 @@ body.dark {
 	   -moz-border-radius: 46px 46px 0 0;
 	     -o-border-radius: 46px 46px 0 0;
 	        border-radius: 46px 46px 0 0;
-	-webkit-box-shadow: 0px 0px 5px 4px #31322c;
-          box-shadow: 0px 0px 5px 4px #31322c;
+	-webkit-box-shadow: 0 0 5px 4px #31322c;
+          box-shadow: 0 0 5px 4px #31322c;
   height: 22px;
 	left: 75px;
 	position: absolute;
@@ -677,8 +677,8 @@ body.dark {
 	   -moz-border-radius: 2px;
 	     -o-border-radius: 2px;
 	        border-radius: 2px;
-	-webkit-box-shadow: 0px -1px 5px 1px #787974;
-          box-shadow: 0px -1px 5px 1px #787974;
+	-webkit-box-shadow: 0 -1px 5px 1px #787974;
+          box-shadow: 0 -1px 5px 1px #787974;
   height: 2px;
 	left: 108px;
 	position: absolute;
@@ -733,8 +733,8 @@ body.dark {
 	   -moz-border-radius: 47px;
 	     -o-border-radius: 47px;
 	        border-radius: 47px;
-  -webkit-box-shadow: 0px 0px 3px 2px #4A4B46;
-          box-shadow: 0px 0px 3px 2px #4A4B46;
+  -webkit-box-shadow: 0 0 3px 2px #4A4B46;
+          box-shadow: 0 0 3px 2px #4A4B46;
   height: 430px;
 	left: 35px;
 	position: absolute;
@@ -748,8 +748,8 @@ body.dark {
 	   -moz-border-radius: 0 0 45px 45px;
 	     -o-border-radius: 0 0 45px 45px;
 	        border-radius: 0 0 45px 45px;
-  -webkit-box-shadow: 0px 2px 3px 0px #C4C4C4;
-          box-shadow: 0px 2px 3px 0px #C4C4C4;
+  -webkit-box-shadow: 0 2px 3px 0 #C4C4C4;
+          box-shadow: 0 2px 3px 0 #C4C4C4;
   height: 45px;
 	left: 40px;
 	position: absolute;
@@ -763,8 +763,8 @@ body.dark {
 	   -moz-border-radius: 0 30px 30px 0;
 	     -o-border-radius: 0 30px 30px 0;
 	        border-radius: 0 30px 30px 0;
-  -webkit-box-shadow: 4px 0px 3px 2px #353535;
-          box-shadow: 4px 0px 3px 2px #353535;
+  -webkit-box-shadow: 4px 0 3px 2px #353535;
+          box-shadow: 4px 0 3px 2px #353535;
   height: 418px;
 	left: 660px;
 	position: absolute;
@@ -778,8 +778,8 @@ body.dark {
 	   -moz-border-radius: 0 30px 30px 0;
 	     -o-border-radius: 0 30px 30px 0;
 	        border-radius: 0 30px 30px 0;
-  -webkit-box-shadow: 8px 0px 8px 1px #1A1A1A;
-          box-shadow: 8px 0px 8px 1px #1A1A1A;
+  -webkit-box-shadow: 8px 0 8px 1px #1A1A1A;
+          box-shadow: 8px 0 8px 1px #1A1A1A;
   height: 418px;
 	left: 635px;
 	position: absolute;
@@ -793,8 +793,8 @@ body.dark {
 	   -moz-border-radius: 0 30px 30px 0;
 	     -o-border-radius: 0 30px 30px 0;
 	        border-radius: 0 30px 30px 0;
-  -webkit-box-shadow: inset -8px 0px 8px 0px #1A1A1A;
-          box-shadow: inset -8px 0px 8px 0px #1A1A1A;
+  -webkit-box-shadow: inset -8px 0 8px 0 #1A1A1A;
+          box-shadow: inset -8px 0 8px 0 #1A1A1A;
   height: 420px;
 	left: 635px;
 	position: absolute;
