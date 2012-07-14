@@ -8,9 +8,9 @@ var clock = {};
  * @const
  */
 clock.MONTHS = [
-    "JAN", "FEB", "MAR", "APR",
-    "MAY", "JUN", "JUL", "AUG",
-    "SEP", "OCT", "NOV", "DEC"
+    'JAN', 'FEB', 'MAR', 'APR',
+    'MAY', 'JUN', 'JUL', 'AUG',
+    'SEP', 'OCT', 'NOV', 'DEC'
 ];
 
 /**
@@ -18,7 +18,7 @@ clock.MONTHS = [
  * @const
  */
 clock.DAYS = [
-    "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"
+    'SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'
 ];
 
 /**
@@ -64,7 +64,7 @@ clock.calendarFlip = function() {
     doanimation = true;
     clock.shown.date += 1;
   } else {
-    $(".calendar-flip .date").css({visibility:"hidden"});			
+    $('.calendar-flip .date').css({visibility: 'hidden'});			
   }
 
   if (month > clock.shown.month) {
@@ -78,21 +78,21 @@ clock.calendarFlip = function() {
     doanimation = true;
     clock.shown.hour += 1;
   } else {
-    $(".calendar-flip .hour").css({visibility:"hidden"});			
+    $('.calendar-flip .hour').css({visibility: 'hidden'});			
   }
 
   if (minute > clock.shown.minute){
     doanimation = true;
     clock.shown.minute += 1;
   } else {
-    $(".calendar-flip .minute").css({visibility:"hidden"});
+    $('.calendar-flip .minute').css({visibility: 'hidden'});
   }
 
   if (second > clock.shown.second){
     doanimation = true;
     clock.shown.second += 1;
   } else {
-    $(".calendar-flip .second").css({visibility:"hidden"});
+    $('.calendar-flip .second').css({visibility: 'hidden'});
   }
 
   if (doanimation) {
