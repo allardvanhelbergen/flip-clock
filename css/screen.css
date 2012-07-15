@@ -79,15 +79,17 @@ body.dark {
 #calendar {
 	height: 375px;
 	margin: auto;
-	position: relative;  
+	position: relative;
 	width: 600px;
 }
 
 .calendar-row {
+  position: relative;
   height: 150px;
 }
 
 .row1 {
+  position: relative;
   padding: 15px 0 0 36px;
 }
 
@@ -148,9 +150,7 @@ body.dark {
 }
 
 .calendar-flip {
-	/*position: absolute;
-	top: 6px;
-	left: 6px;*/
+	position: absolute;
 	-webkit-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
 	   -moz-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
 	     -o-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
@@ -163,6 +163,16 @@ body.dark {
 	        transform-origin: 50% 100%;
 }
 
+.row1 .calendar-flip {
+  top: 15px;
+	left: 36px;
+}
+
+.row2 .calendar-flip {
+  top: -2px;
+	left: 137px;
+}
+
 .fliptop {
 	-webit-transform: rotateX(90deg);
    	-moz-transform: rotateX(90deg);
@@ -172,7 +182,7 @@ body.dark {
 }
 
 .flipbottom {
-	bottom: 2px;
+	/*bottom: 2px;*/
 	-webkit-transform: rotateX(180deg);
      -moz-transform: rotateX(180deg);
        -o-transform: rotateX(180deg);
