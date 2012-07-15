@@ -85,43 +85,42 @@ body.dark {
 
 .calendar-row {
   height: 150px;
-  text-align: center;
 }
 
 .row1 {
-  padding: 19px 0 0 36px;
+  padding: 15px 0 0 36px;
 }
 
 .row2 {
-  margin-top: 95px;
+  margin-top: 91px;
   padding-left: 137px;
+  width: 500px;
 }
 
-/*
 .calendar-top,
 .calendar-bottom,
 .calendar-flip {
-	position: relative;
-	height: 50px;
+  position: relative;
+	height: 60px;
 	margin-top: 2px;
 	overflow: hidden;
 }
 
-.calendar-bottom * {
-	margin-top: -53px;
+.calendar-top .flipper {
+  background: blue;
 }
 
-.calendar-flip {
-	position: absolute;
-	top: 6px;
-	left: 6px;
+.calendar-bottom .flipper {
+  background: red;
 }
-*/
+
+.calendar-bottom .flipper {
+	margin-top: -60px;
+}
+
 .flipper {
-  /*outline: 1px solid #bada55;*/
 	width: 133px;
 	height: 120px;
-	padding: 0 0;
 	background: #1a1a1a;
 	float: left;
 	font-size: 110px;
@@ -146,6 +145,22 @@ body.dark {
 .month,
 .minute {
   margin-left: 63px;
+}
+
+.calendar-flip {
+	/*position: absolute;
+	top: 6px;
+	left: 6px;*/
+	-webkit-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
+	   -moz-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
+	     -o-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
+	    -ms-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
+	        transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
+	-webkit-transform-origin: 50% 100%;
+	   -moz-transform-origin: 50% 100%;
+	     -o-transform-origin: 50% 100%;
+	    -ms-transform-origin: 50% 100%;
+	        transform-origin: 50% 100%;
 }
 
 .fliptop {
@@ -175,22 +190,6 @@ body.dark {
 	     -o-transform: rotateX(180deg);
 	    -ms-transform: rotateX(180deg);
 	        transform: rotateX(180deg);
-}
-
-.calendar-flip {
-	/*position: absolute;
-	top: 6px;
-	left: 6px;*/
-	-webkit-transition: all 0.1s ease-in-out;
-	   -moz-transition: all 0.1s ease-in-out;
-	     -o-transition: all 0.1s ease-in-out;
-	    -ms-transition: all 0.1s ease-in-out;
-	        transition: all 0.1s ease-in-out;
-	-webkit-transform-origin: 50% 100%;
-	   -moz-transform-origin: 50% 100%;
-	     -o-transform-origin: 50% 100%;
-	    -ms-transform-origin: 50% 100%;
-	        transform-origin: 50% 100%;
 }
 
 /**

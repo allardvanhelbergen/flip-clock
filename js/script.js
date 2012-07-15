@@ -22,13 +22,6 @@ clock.DAYS = [
 ];
 
 /**
- * The classes that reference the divs containing the hands.
- */
-clock.cssReference = {
-  CLOCK: '#clock'
-};
-
-/**
  * The current active shown date time content.
  */
 clock.shown = {
@@ -88,45 +81,39 @@ clock.calendarFlip = function() {
     $('.calendar-flip .minute').css({visibility: 'hidden'});
   }
 
-  if (second > clock.shown.second){
-    doanimation = true;
-    clock.shown.second += 1;
-  } else {
-    $('.calendar-flip .second').css({visibility: 'hidden'});
-  }
-
   if (doanimation) {
+    console.log('flipping', d, clock.shown);
+    
     $('.calendar-top .month').text(clock.MONTHS[clock.shown.month]);
     $('.calendar-top .day').text(clock.DAYS[clock.shown.day]);
     $('.calendar-top .date').text(clock.shown.date);
     $('.calendar-top .hour').text(clock.shown.hour);
     $('.calendar-top .minute').text(clock.shown.minute);
-    $('.calendar-top .second').text(clock.shown.second);
-    $('.calendar-flip').addClass('fliptop');
-    $('.calendar-flip .month').animate({opacity: 1}, 100, function() {
+    
+   /*$('.calendar-flip').addClass('fliptop');
+    /*$('.calendar-flip .month').animate({opacity: 1}, 100, function() {
       //$('.calendar-flip').css({top: 8});
       $('.calendar-flip .month').text(clock.MONTHS[clock.shown.month]);
-      $('.calendar-flip .day').text(clock.DAYS[clock.shown.day]);
-      $('.calendar-flip .date').text(clock.shown.date);
-      $('.calendar-flip .hour').text(clock.shown.hour);
-      $('.calendar-flip .minute').text(clock.shown.minute);
-      $('.calendar-flip .second').text(clock.shown.second);
+      //$('.calendar-flip .day').text(clock.DAYS[clock.shown.day]);
+      //$('.calendar-flip .date').text(clock.shown.date);
+      //$('.calendar-flip .hour').text(clock.shown.hour);
+      //$('.calendar-flip .minute').text(clock.shown.minute);
       $('.calendar-flip').addClass('flipbottom');
       $('.calendar-flip').animate({opacity: 1}, 200, function() {
-        $('.calendar-bottom .month').text(clock.MONTHS[clock.shown.month]);
-        $('.calendar-bottom .day').text(clock.DAYS[clock.shown.day]);
-        $('.calendar-bottom .date').text(clock.shown.date);
-        $('.calendar-bottom .hour').text(clock.shown.hour);
-        $('.calendar-bottom .minute').text(clock.shown.minute);
-        $('.calendar-bottom .second').text(clock.shown.second);
-        $(this).hide().css({top: 6})
-            .removeClass('fliptop')
-            .removeClass('flipbottom')
-            .animate({top: 6}, 800, function() {
-              $(this).show();
-            });
+        //$('.calendar-bottom .month').text(clock.MONTHS[clock.shown.month]);
+        //$('.calendar-bottom .day').text(clock.DAYS[clock.shown.day]);
+        //$('.calendar-bottom .date').text(clock.shown.date);
+        //$('.calendar-bottom .hour').text(clock.shown.hour);
+        //$('.calendar-bottom .minute').text(clock.shown.minute);
+        //$(this).hide().css({top: 6})
+        //    .removeClass('fliptop')
+        //    .removeClass('flipbottom')
+        //    .animate({top: 6}, 800, function() {
+        //      $(this).show();
+        //    });
         });
-    });
+    });*/
+    
     return true;
   } else { 
   	t = clearInterval(t);
@@ -137,8 +124,7 @@ clock.calendarFlip = function() {
 
 // Run the clock
 $(document).ready(function() {
-  $(clock.cssReference.CLOCK).addClass('running');
-  //t = setInterval(clock.calendarFlip, 1000);
+  t = setInterval(clock.calendarFlip, 1000);
   
   $('#color-switch').click(function() {
     $('body').toggleClass('light').toggleClass('dark');
