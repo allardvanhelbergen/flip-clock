@@ -43,8 +43,6 @@ clock.calendarFlip = function() {
   var minute = d.getMinutes();
   var second = d.getSeconds();
 
-  //console.log('hours:', clock.shown.hours);
-
   var doanimation = false;
   if (day > clock.shown.day) {
   	doanimation = true;
@@ -82,39 +80,49 @@ clock.calendarFlip = function() {
   }
 
   if (doanimation) {
-    console.log('flipping', d, clock.shown);
-    
+
+    // Set top values behind flipper
     $('.calendar-top .month').text(clock.MONTHS[clock.shown.month]);
     $('.calendar-top .day').text(clock.DAYS[clock.shown.day]);
     $('.calendar-top .date').text(clock.shown.date);
     $('.calendar-top .hour').text(clock.shown.hour);
     $('.calendar-top .minute').text(clock.shown.minute);
-    
-   /*$('.calendar-flip').addClass('fliptop');
-    /*$('.calendar-flip .month').animate({opacity: 1}, 100, function() {
-      //$('.calendar-flip').css({top: 8});
+
+    // Initiate top transition
+    $('.calendar-flip').addClass('fliptop');
+
+    // Wait for top transition to finish
+    $('.calendar-flip .month').animate({'opacity': 1}, 100, function() {
+      // Adjust positioning and set values for flipper
       $('.calendar-flip .month').text(clock.MONTHS[clock.shown.month]);
-      //$('.calendar-flip .day').text(clock.DAYS[clock.shown.day]);
-      //$('.calendar-flip .date').text(clock.shown.date);
-      //$('.calendar-flip .hour').text(clock.shown.hour);
-      //$('.calendar-flip .minute').text(clock.shown.minute);
+      $('.calendar-flip .day').text(clock.DAYS[clock.shown.day]);
+      $('.calendar-flip .date').text(clock.shown.date);
+      $('.calendar-flip .hour').text(clock.shown.hour);
+      $('.calendar-flip .minute').text(clock.shown.minute);
+      $('.calendar-flip').css('top', '+=2');
+
+      // Initiate bottom transtion
       $('.calendar-flip').addClass('flipbottom');
-      $('.calendar-flip').animate({opacity: 1}, 200, function() {
-        //$('.calendar-bottom .month').text(clock.MONTHS[clock.shown.month]);
-        //$('.calendar-bottom .day').text(clock.DAYS[clock.shown.day]);
-        //$('.calendar-bottom .date').text(clock.shown.date);
-        //$('.calendar-bottom .hour').text(clock.shown.hour);
-        //$('.calendar-bottom .minute').text(clock.shown.minute);
-        //$(this).hide().css({top: 6})
-        //    .removeClass('fliptop')
-        //    .removeClass('flipbottom')
-        //    .animate({top: 6}, 800, function() {
-        //      $(this).show();
-        //    });
-        });
-    });*/
-    
-    return true;
+
+      // Wait for bottom transition to finish
+      $('.calendar-flip').animate({'opacity': 1}, 100, function() {
+        $('.calendar-bottom .month').text(clock.MONTHS[clock.shown.month]);
+        $('.calendar-bottom .day').text(clock.DAYS[clock.shown.day]);
+        $('.calendar-bottom .date').text(clock.shown.date);
+        $('.calendar-bottom .hour').text(clock.shown.hour);
+        $('.calendar-bottom .minute').text(clock.shown.minute);
+
+        // Hide flipper, transition back and show it again
+        $(this).hide().css('top', '-=2')
+            .removeClass('fliptop')
+
+            .removeClass('flipbottom')
+            .animate({'opacity': 1}, 200, function() {
+              $(this).show();
+            });
+      });
+    });
+
   } else { 
   	t = clearInterval(t);
     return false;
@@ -124,8 +132,8 @@ clock.calendarFlip = function() {
 
 // Run the clock
 $(document).ready(function() {
-  //t = setInterval(clock.calendarFlip, 1000);
-  
+  t = setInterval(clock.calendarFlip, 500);
+
   $('#color-switch').click(function() {
     $('body').toggleClass('light').toggleClass('dark');
     $('#calendar-container').toggleClass('black').toggleClass('white');

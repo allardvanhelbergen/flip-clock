@@ -16,9 +16,8 @@ body {
 }
 
 .container {
-  display: none;
   font-family: 'Helvetica', sans-serif;
-  height: 100%;
+  height: 1200px;
   margin: auto;
   width: 600px;
   padding: 20px;
@@ -70,17 +69,23 @@ body.dark {
 #calendar-container {
   color: #fff;
 	font-family: 'Impact', sans-serif;
-	position: relative;
+	padding-top: 20px;
+	position: absolute;
   left: 0;
+  height: 575px;
   top: 250px;
   width: 100%;
+  overflow: hidden;
 }
 
 #calendar {
 	height: 375px;
 	margin: auto;
 	position: relative;
+	top: -425px;
 	width: 600px;
+	-webkit-perspective: 600;
+	        perspective: 600;
 }
 
 .calendar-row {
@@ -106,14 +111,6 @@ body.dark {
 	height: 60px;
 	margin-top: 2px;
 	overflow: hidden;
-}
-
-.calendar-top .flipper {
-  background: blue;
-}
-
-.calendar-bottom .flipper {
-  background: red;
 }
 
 .calendar-bottom .flipper {
@@ -151,11 +148,11 @@ body.dark {
 
 .calendar-flip {
 	position: absolute;
-	-webkit-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
-	   -moz-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
-	     -o-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
-	    -ms-transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
-	        transition: all 0.1s cubic-bezier(.5, .01, .5, 1);
+	-webkit-transition: all .1s ease-in-out;
+	   -moz-transition: all .1s ease-in-out;
+	     -o-transition: all .1s ease-in-out;
+	    -ms-transition: all .1s ease-in-out;
+	        transition: all .1s ease-in-out;
 	-webkit-transform-origin: 50% 100%;
 	   -moz-transform-origin: 50% 100%;
 	     -o-transform-origin: 50% 100%;
@@ -174,27 +171,26 @@ body.dark {
 }
 
 .fliptop {
-	-webit-transform: rotateX(90deg);
-   	-moz-transform: rotateX(90deg);
-   	  -o-transform: rotateX(90deg);
-   	 -ms-transform: rotateX(90deg);
-   	     transform: rotateX(90deg);
+	-webkit-transform: rotateX(-90deg);
+     -moz-transform: rotateX(-90deg);
+       -o-transform: rotateX(-90deg);
+      -ms-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
 }
 
 .flipbottom {
-	/*bottom: 2px;*/
-	-webkit-transform: rotateX(180deg);
-     -moz-transform: rotateX(180deg);
-       -o-transform: rotateX(180deg);
-      -ms-transform: rotateX(180deg);
-          transform: rotateX(180deg);
+	-webkit-transform: rotateX(-180deg);
+     -moz-transform: rotateX(-180deg);
+       -o-transform: rotateX(-180deg);
+      -ms-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
 }
 
 .flipbottom .month,
 .flipbottom .day,
+.flipbottom .date,
 .flipbottom .hour,
-.flipbottom .minute,
-.flipbottom .second {
+.flipbottom .minute {
 	-webkit-transform: rotateX(180deg);
 	   -moz-transform: rotateX(180deg);
 	     -o-transform: rotateX(180deg);
@@ -221,10 +217,8 @@ body.dark {
 	        border-radius: 50px;
   margin: auto;
   position: relative;
-  top: -425px;
   width: 735px;
   height: 475px;
-  z-index: -1;
 }
 
 .flipper-bg {
@@ -488,7 +482,7 @@ body.dark {
 #foreground {
   margin: auto;
   position: relative;
-  top: -915px;
+  top: -865px;
   width: 750px;
 }
 
