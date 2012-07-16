@@ -24,7 +24,7 @@ body {
 }
 
 header {
-  margin: 25px 0 575px;
+  margin: 25px 0 650px;
 }
 
 footer {
@@ -36,9 +36,26 @@ h1 {
   font-size: 300%;
 }
 
-h1 span {
+.subtitle {
   color: darkgray;
-  font-size: 75%;
+}
+
+.container p {
+  text-align: center;
+  font-style: oblique;
+  margin: 1.5em 0;
+}
+
+a:hover,
+a:active,
+a:link,
+a:visited {
+  color: #6f6f6f;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: underline;
 }
 
 body.light {
@@ -48,7 +65,7 @@ body.light {
 .light .container {
   background-color: #fff;
   box-shadow: 0 0 15px #888;
-  color: #000;
+  color: #6f6f6f;
 }
 
 body.dark {
