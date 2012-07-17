@@ -45,31 +45,31 @@ clock.calendarFlip = function() {
 
   var doanimation = false;
   if (day > clock.shown.day) {
-  	doanimation = true;
-  	clock.shown.day += 1;
+    doanimation = true;
+    clock.shown.day += 1;
   } else {
-  	$('.calendar-flip .day').css({visibility: 'hidden'});
+    $('.calendar-flip .day').css({visibility: 'hidden'});
   }
 
   if (date > clock.shown.date){
     doanimation = true;
     clock.shown.date += 1;
   } else {
-    $('.calendar-flip .date').css({visibility: 'hidden'});			
+    $('.calendar-flip .date').css({visibility: 'hidden'});      
   }
 
   if (month > clock.shown.month) {
-  	doanimation = true;
-  	clock.shown.month += 1;
+    doanimation = true;
+    clock.shown.month += 1;
   } else {
-  	$('.calendar-flip .month').css({visibility: 'hidden'});
+    $('.calendar-flip .month').css({visibility: 'hidden'});
   }
 
   if (hour > clock.shown.hour){
     doanimation = true;
     clock.shown.hour += 1;
   } else {
-    $('.calendar-flip .hour').css({visibility: 'hidden'});			
+    $('.calendar-flip .hour').css({visibility: 'hidden'});      
   }
 
   if (minute > clock.shown.minute){
@@ -91,7 +91,7 @@ clock.calendarFlip = function() {
     // Initiate top transition
     $('.calendar-flip').addClass('fliptop');
 
-    // Wait for top transition to finish
+    // Wait for top transition to finish (this is a hack)
     $('.calendar-flip .month').animate({'opacity': 1}, 100, function() {
       // Adjust positioning and set values for flipper
       $('.calendar-flip .month').text(clock.MONTHS[clock.shown.month]);
@@ -104,7 +104,7 @@ clock.calendarFlip = function() {
       // Initiate bottom transtion
       $('.calendar-flip').addClass('flipbottom');
 
-      // Wait for bottom transition to finish
+      // Wait for bottom transition to finish (again, hack)
       $('.calendar-flip').animate({'opacity': 1}, 100, function() {
         $('.calendar-bottom .month').text(clock.MONTHS[clock.shown.month]);
         $('.calendar-bottom .day').text(clock.DAYS[clock.shown.day]);
@@ -112,7 +112,7 @@ clock.calendarFlip = function() {
         $('.calendar-bottom .hour').text(clock.shown.hour);
         $('.calendar-bottom .minute').text(clock.shown.minute);
 
-        // Hide flipper, transition back and show it again
+        // Hide flipper, transition back and wait (hack) and show it again
         $(this).hide().css('top', '-=2')
             .removeClass('fliptop')
 
@@ -124,7 +124,7 @@ clock.calendarFlip = function() {
     });
 
   } else { 
-  	t = clearInterval(t);
+    t = clearInterval(t);
     return false;
   }
 }
@@ -133,9 +133,4 @@ clock.calendarFlip = function() {
 // Run the clock
 $(document).ready(function() {
   t = setInterval(clock.calendarFlip, 500);
-
-  $('#color-switch').click(function() {
-    $('body').toggleClass('light').toggleClass('dark');
-    $('#calendar-container').toggleClass('black').toggleClass('white');
-  });
 });
